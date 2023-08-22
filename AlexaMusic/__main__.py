@@ -18,10 +18,10 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS
-from AlexsaceiMusic import LOGGER, app, userbot
-from AlexsaceiMusic.core.call import Alexsa
-from AlexsaceiMusic.plugins import ALL_MODULES
-from AlexsaceiMusic.utils.database import get_banned_users, get_gbanned
+from AlexaMusic.core.bot import LOGGER, app, userbot
+from AlexaMusic.core.bot.core.call import Alexsa
+from AlexaMusic.core.bot.plugins import ALL_MODULES
+from AlexaMusic.core.bot.utils.database import get_banned_users, get_gbanned
 
 loop = asyncio.get_event_loop()
 
@@ -46,24 +46,24 @@ async def init():
         pass
     await app.start()
     for all_module in ALL_MODULES:
-        importlib.import_module("AlexsaMusic.plugins" + all_module)
-    LOGGER("AlexsaceiMusic.plugins").info("Necessary Modules Imported Successfully.")
+        importlib.import_module("AlexaMusic.core.bot.plugins" + all_module)
+    LOGGER("AlexaMusic.core.bot.plugins").info("Necessary Modules Imported Successfully.")
     await userbot.start()
     await Alexsa.start()
     try:
-        await Alexsa.stream_call("https://telegra.ph/file/b60b80ccb06f7a48f68b5.mp4")
+        await Alexa.stream_call("https://telegra.ph/file/b60b80ccb06f7a48f68b5.mp4")
     except NoActiveGroupCall:
-        LOGGER("AlexsaMusic").error(
+        LOGGER("AlexaMusic").error(
             "[ERROR] - \n\nTurn on group voice chat and don't put it off otherwise I'll stop working thanks."
         )
         sys.exit()
     except:
         pass
     await Alexa.decorators()
-    LOGGER("AlexsaMusic").info("Music Bot Started Successfully")
+    LOGGER("AlexaMusic").info("Music Bot Started Successfully")
     await idle()
 
 
 if __name__ == "__main__":
     loop.run_until_complete(init())
-    LOGGER("AlexsaMusic").info("Stopping Music Bot")
+    LOGGER("AlexaMusic").info("Stopping Music Bot")
