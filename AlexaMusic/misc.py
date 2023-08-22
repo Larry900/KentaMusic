@@ -16,7 +16,7 @@ import heroku3
 from pyrogram import filters
 
 import config
-from AlexasaceiMusic.core.mongo import pymongodb
+from AlexaMusic.core.mongo import pymongodb
 
 from .logging import LOGGER
 
