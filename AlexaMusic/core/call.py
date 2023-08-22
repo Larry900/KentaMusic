@@ -27,9 +27,9 @@ from pytgcalls.types.stream import StreamAudioEnded
 
 import config
 from strings import get_string
-from AlexsaceiMusic import LOGGER, YouTube, app
-from AlexsaceiMusic.misc import db
-from AlexsaceiMusic.utils.database import (
+from AlexaMusic import LOGGER, YouTube, app
+from AlexaMusic.misc import db
+from AlexaMusic.utils.database import (
     add_active_chat,
     add_active_video_chat,
     get_assistant,
@@ -45,11 +45,11 @@ from AlexsaceiMusic.utils.database import (
     remove_active_video_chat,
     set_loop,
 )
-from AlexsaceiMusic.utils.exceptions import AssistantErr
-from AlexsaceiMusic.utils.inline.play import stream_markup, telegram_markup
+from AlexaMusic.utils.exceptions import AssistantErr
+from AlexaMusic.utils.inline.play import stream_markup, telegram_markup
 from AlexsaceiMusic.utils.stream.autoclear import auto_clean
-from AlexsaceiMusic.utils.thumbnails import gen_thumb
-from AlexsaceiMusic.utils.theme import check_theme
+from AlexaMusic.utils.thumbnails import gen_thumb
+from AlexaMusic.utils.theme import check_theme
 
 
 autoend = {}
