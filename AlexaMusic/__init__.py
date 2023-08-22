@@ -9,11 +9,11 @@
 # All rights reserved. © Alexa © Yukki © Alexsacei
 
 
-from AlexsaceiMusic.core.bot import AlexsaBot
-from AlexsaceiMusic.core.dir import dirr
-from AlexsaceiMusic.core.git import git
-from AlexsaceiMusic.core.userbot import Userbot
-from AlexsaceiMusic.misc import dbb, heroku, sudo
+from AlexaMusic.core.bot import AlexsaBot
+from AlexaMusic.core.dir import dirr
+from AlexaMusic.core.bot.core.git import git
+from AlexaMusic.core.bot.core.userbot import Userbot
+from AlexaMusic.core.bot.misc import dbb, heroku, sudo
 
 from .logging import LOGGER
 
